@@ -46,7 +46,13 @@ const Navbar = () => {
         <img src={assets.cart_icon} className="w-5 min-w-5" alt=" "/>
         <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[-8px]">10</p>
         </Link>
-        <img onClick={()=>setVisible()} src={assets.menu_icon} className="w-5 cursor-pointer sm:hidden" alt=""/>
+        <img onClick={()=>{setVisible(true)}} src={assets.menu_icon} className="w-5 cursor-pointer " alt=""/>
+      </div>
+
+      {/* Sidebar menu for smaller screen */}
+
+      <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`}>
+
       </div>
     </div>
   );
